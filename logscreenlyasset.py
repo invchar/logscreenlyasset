@@ -3,6 +3,7 @@ import json
 import datetime
 import subprocess
 import argparse
+import os
 
 parser = argparse.ArgumentParser(description='Create play log for asset from dump of playlists from Screenly API')
 parser.add_argument('--screenlymanagementpath')
@@ -33,3 +34,4 @@ for playlist in playlists:
 		print(playlist['title'])
 		print('-- Army04.png plays every ' + '{0:02.0f}:{1:02.0f}'.format(*divmod(total_time , 60)))
 
+os.remove("{}data.json".format(dumppath))
