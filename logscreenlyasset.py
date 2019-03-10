@@ -17,7 +17,7 @@ assettitle = vars(args)['assettitle']
 
 subprocess.call("{}screenlymanagement.py --action dumpPlaylists --filepath {}".format(screenlymanagementpath, dumppath), shell=True)
 
-with open("data.json") as f:
+with open("{}data.json".format(dumppath)) as f:
 	json = json.load(f)
 
 playlists = json['playlists']
