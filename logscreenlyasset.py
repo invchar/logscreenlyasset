@@ -23,8 +23,9 @@ with open("{}data.json".format(dumppath)) as f:
 
 playlists = json['playlists']
 
+print(' ')
 print('Playlist log')
-print('Generated ' + str(datetime.datetime.now()))
+print('Generated ' + str(datetime.date.today()))
 
 for playlist in playlists:
 	if any(a['title'] == assettitle for a in playlist['assets']):
